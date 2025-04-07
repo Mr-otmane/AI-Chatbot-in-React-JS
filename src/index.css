@@ -16,6 +16,7 @@ body {
   background: linear-gradient(#f4f0ff, #dacdff);
 }
 .chatbot-popup {
+  position: relative;
   width: 420px;
   overflow: hidden;
   background: #fff;
@@ -109,4 +110,45 @@ body {
   color: #fff;
   background: #593bab;
   border-radius: 13px 13px 3px 13px;
+}
+.chat-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  padding: 15px 22px 20px;
+}
+.chat-footer .chat-form {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 32px;
+  outline: 1px solid #cccce5;
+}
+.chat-form .message-input {
+  border: none;
+  outline: none;
+  width: 100%;
+  background: none;
+  height: 47px;
+  padding: 0 17px;
+  font-size: 0.95rem;
+}
+.chat-form button {
+  height: 35px;
+  width: 35px;
+  color: #fff;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  margin-right: 6px;
+  background: #6d4fc2;
+  transition: 0.2s ease;
+}
+
+.chat-form button:hover {
+  background: #593bab;
 }
