@@ -26,13 +26,16 @@ const App = () => {
             </p>
           </div>
 
-          <div className="message user-message">
-            <p className="message-text">
-              Lorem ipsum, dolor sit amet consectetur adipisicing.
-            </p>
-          </div>
+          {/* {Render the chat history dynamically} */}
+          {chatHistory.map((chat,index) => (
+            <chatMessage key={index} chat={chat}/>
+          ))}
+
+        
         </div>
+
         {/* Chatbot Footer */}
+
         <div className="chat-footer">
           <ChatForm setChatHistory= {setChatHistory}/>
         </div>
