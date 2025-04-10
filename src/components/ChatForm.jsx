@@ -8,7 +8,7 @@ const ChatForm = ({ setChatHistory }) => {
     if (!userMessage) return;
     inputRef.current.value = "";
 
-    // Update chat history with the user's
+    // Update chat history with the user's message
 
     setChatHistory((history) => [
       ...history,

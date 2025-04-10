@@ -1,16 +1,15 @@
-import Chatbotlcom from "./components/Chatbotlcom";
+import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 
 const App = () => {
-
-  const [chatHistory, setChatHistory]= useState([]);
+  const [chatHistory, setChatHistory] = useState([]);
   return (
     <div className="container">
       <div className="chatbot-popup">
         {/* Chatbot Header */}
         <div className="chat-header">
           <div className="header-info">
-            <Chatbotlcom />
+            <ChatbotIcom />
             <h2 className="logo-text">Chatbot</h2>
           </div>
           <button className="material-symbols-rounded">
@@ -20,24 +19,22 @@ const App = () => {
         {/* Chatbot Body */}
         <div className="chat-body">
           <div className="message bot-message">
-            <Chatbotlcom />
+            <ChatbotIcon />
             <p className="message-text">
               Hey there 👋 <br /> How can I help you today?
             </p>
           </div>
 
           {/* {Render the chat history dynamically} */}
-          {chatHistory.map((chat,index) => (
-            <chatMessage key={index} chat={chat}/>
+          {chatHistory.map((chat, index) => (
+            <chatMessage key={index} chat={chat} />
           ))}
-
-        
         </div>
 
         {/* Chatbot Footer */}
 
         <div className="chat-footer">
-          <ChatForm setChatHistory= {setChatHistory}/>
+          <ChatForm setChatHistory={setChatHistory} />
         </div>
       </div>
     </div>
