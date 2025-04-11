@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 
@@ -9,7 +10,7 @@ const App = () => {
         {/* Chatbot Header */}
         <div className="chat-header">
           <div className="header-info">
-            <ChatbotIcom />
+            <ChatbotIcon />
             <h2 className="logo-text">Chatbot</h2>
           </div>
           <button className="material-symbols-rounded">
@@ -26,9 +27,10 @@ const App = () => {
           </div>
 
           {/* {Render the chat history dynamically} */}
-          {chatHistory.map((chat, index) => (
-            <chatMessage key={index} chat={chat} />
-          ))}
+         {chatHistory.map((chat, index) => (
+          <ChatMessage key={index} chat={chat}/>
+         ))}
+         
         </div>
 
         {/* Chatbot Footer */}
