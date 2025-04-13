@@ -30,7 +30,7 @@ const App = () => {
 
         {/* Chatbot Footer */}
         <div className="chat-footer">
-          <ChatForm />
+          <ChatForm setChatHistory={setChatHistory} />
         </div>
       </div>
     </div>
