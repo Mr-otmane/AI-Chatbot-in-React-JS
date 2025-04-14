@@ -26,6 +26,12 @@ const App = () => {
               Hey there 👋 <br /> How can I help you today?
             </p>
           </div>
+
+          {/* Render the chat history dynamically */}
+          {chatHistory.map((chat,index)=> (
+            <ChatMessage key={index} chat={chat}/>
+          ))
+          }
         </div>
 
         {/* Chatbot Footer */}
