@@ -1,3 +1,5 @@
+import ChatbotIcon from "./ChatbotIcom";
+
 const ChatMessage = ({ chat }) => {
   return (
     <div
