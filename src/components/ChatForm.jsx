@@ -14,6 +14,10 @@ const ChatForm = ({ setChatHistory }) => {
       ...history,
       { role: "user", text: userMessage },
     ]);
+
+    // Add a "Thinking..." placeholder for the bot's response
+   
+    setTimeout(() => setChatHistory((history) => [...history,  {role: "model" , text: "Thinking..."}]), 600)
   };
   return (
     <form action="#" className="chat-form" onSubmit={handleFormSubmit}>
